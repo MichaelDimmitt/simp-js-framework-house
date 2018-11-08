@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "angular": "run(){ if [ -z \"$1\" ]; then npm run -s prompt; else echo \"$(npm run -s install @angular/cli); ng new $1; cd $1;\"; fi; };run",
+    "cra": "run(){ if [ -z \"$1\" ]; then npm run -s prompt; else echo \"$(npm run -s install create-react-app); create-react-app $1; cd $1;\"; fi; };run",
+    "ember": "run(){ if [ -z \"$1\" ]; then npm run -s prompt; else echo \"$(npm run -s install ember-cli); ember new $1; cd $1;\"; fi; };run",
+    "preact": "run(){ if [ -z \"$1\" ]; then npm run -s prompt; else echo \"$(npm run -s install preact-cli); preact create default $1; cd $1\"; fi; };run",
+    "vue": "run(){ if [ -z \"$1\" ]; then npm run -s prompt; else echo \"$(npm run -s install @vue/cli); vue create $1; cd $1; \"; fi; }; run",
+    "js-house": "run(){ npm run -s angular $1; npm run -s cra $1; npm run -s ember $1; npm run -s preact $1; npm run -s vue $1;}; run",
+    "js-house-v": "run(){ echo 'runAll(){'; npm run -s angular angular-$1; echo 'cd ..;'; npm run -s cra cra-$1; echo 'cd ..;'; npm run -s ember ember-$1; echo 'cd ..;'; npm run -s preact preact-$1; echo 'cd ..;'; npm run -s vue vue-$1; echo 'cd ..;'; echo 'npm run show'; echo '}; runAll'; echo ; }; run",
+    "install": "run(){ echo \"npm uninstall -g $1; npm install -g $1\"; }; run",
+    "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';",
+    "show": "dir(){ for d in ./*/ ; do (echo \"$d\"); done; }; echo 'project update: look at all of the cool projects! ✨ ✨ 🌈 '; echo ; dir; echo ;"
   },
   "author": "",
   "license": "ISC"
