@@ -4,7 +4,7 @@
 
 ## Future Enhancements:
 1) Project installs to home directory via a hidden folder, example: .simp-js-framework-house.
-2) Alias added to rc file for `temp=$PWD; cd $HOME/.simp-js-framework-house; npm run <action> <app name>; mv <app name>* $temp;`.
+2) Alias added to rc file for `cd $HOME/.simp-js-framework-house; npm run <action> <app name>; cd -;`.
 
 ## Some Application Guarantees
 1) The installer for these different frameworks will always be up to date.
