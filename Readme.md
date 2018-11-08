@@ -23,3 +23,4 @@ Issues tab: https://github.com/MichaelDimmitt/js-framework-house/issues/new
 Regarding Preact:
 https://www.reddit.com/r/javascript/comments/5k682g/what_is_in_react_that_preact_does_not_have/
 
+## For what it is worth this could have been written as a bash script but that would not be as much fun
