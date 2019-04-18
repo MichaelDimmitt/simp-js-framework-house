@@ -11,8 +11,7 @@
 
 ## Usage example derived from the package.json:
 ```bash
-npm install;
-npm run js-house
+npm install &&
 npm run js-house-v name
 ```
 
